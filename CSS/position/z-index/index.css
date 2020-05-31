@@ -1,0 +1,151 @@
+.header {
+  position: relative;
+  height: 44px;
+  background-color: #373738;
+  text-align: center;
+  color: #fff;
+  z-index: 10;
+}
+
+.header-title {
+  font-size: 18px;
+  line-height: 44px;
+}
+
+.header .icon-plus {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  background: url(http://coding.imweb.io/img/icons/plus.png) center no-repeat;
+  background-size: 18px;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.header .popup-ctn {
+  background: #373738;
+  width: 130px;
+  position: absolute;
+  right: 0;
+  top: 54px;
+  border-radius: 2px;
+}
+
+.popup-ctn::after {
+  content: "";
+  border-bottom: 7px solid #373837;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  position: absolute;
+  top: -7px;
+  right: 13px;
+}
+
+.popup-ctn li {
+  position: relative;
+  line-height: 43px;
+  border-bottom: 1px solid #5d5d5d;
+  padding: 0 10px;
+}
+
+.popup-ctn li:last-child {
+  border-bottom: none;
+}
+
+.popup-ctn .icon--pic {
+  background: url(http://coding.imweb.io/img/icons/chat.png) no-repeat 100%;
+  background-size: 100%;
+  width: 26px;
+  height: 28px;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+}
+
+.popup-item-text {
+  margin-left: 36px;
+  text-align: left;
+}
+
+.page-msg {
+  max-width: 640px;
+  background: #fff;
+  margin-top: 20px;
+}
+
+.msg-item {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 10px 10px 10px 70px;
+  /* TODO: 设置卡片容器为相对定位*/
+  position: relative;
+}
+
+.msg-item .item-img-wrap {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.msg-item .item-img {
+  border-radius: 4px;
+}
+
+.msg-item .icon-tips {
+  background: red;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 18px;
+  transform: scaleX(0.9);
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
+.msg-item .tips--one-num {
+  width: 18px;
+}
+
+.tips--more-num {
+  padding: 0 5px;
+}
+
+.tips--only {
+  width: 10px;
+  height: 10px;
+  /* right: -4px; */
+  /* top: -4px; */
+}
+
+.item-text {
+  height: 50px;
+}
+
+.item-text .item-title {
+  color: #0d0d0d;
+  line-height: 1.5;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 90px;
+}
+
+.item-text .item-desc {
+  font-size: 14px;
+  color: #bbb;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item-time {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ddd;
+  font-size: 12px;
+  line-height: 24px;
+}

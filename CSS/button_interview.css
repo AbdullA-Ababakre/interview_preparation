@@ -1,0 +1,21 @@
+.wrapper {
+  height: 20px;
+  width: 80px;
+  background-color: #dddddd;
+  padding: 4px;
+  transition: all 2s;
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+
+.wrapper:hover {
+  background-color: #387e22;
+}
+
+.wrapper:hover .btn {
+  transform: translateX(60px);
+}

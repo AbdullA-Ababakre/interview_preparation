@@ -1,0 +1,21 @@
+1.什么时候开始接触前端
+2.你印象最深的项目
+我写过一个小程序  听听前人说 算是知识付费的项目 把校园里的优秀的人
+性能：
+我想的是从3个方面，减少请求次数，减少请求的大小，提高网络速度
+imagemin图片压缩
+JPG图片 有损压缩,
+3. 事件委托
+比喻有ul,li 
+1.）通过JS新添加的li元素并没有该事件的绑定，所以点击无效
+2.）元素比较多的话，比喻有2个li,那每个li都绑定一个事件，性能非常低
+事件委托是指通过利用事件冒泡，只指定一个事件处理程序，用来管理某一类型的所有事件
+4.class A class B class C  
+通过原型链来实现继承
+5.static 方法 getDerivedStatesFromProps()  为什么是static,为什么要用这个方法
+6.high order component 的好处   本质上是一个代码复用，相当于一个decorator，装饰器模式
+pure function  pure component
+平时把什么当成一个函数
+7.react 性能优化
+8.Jquery的  onready,onload什么时候触发
+9.redux项目

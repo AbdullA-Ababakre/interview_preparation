@@ -1,0 +1,81 @@
+.page-msg {
+  max-width: 640px;
+  background: #fff;
+  margin-top: 20px;
+}
+
+.msg-item {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 10px 10px 10px 70px;
+  /* TODO: 设置卡片容器为相对定位*/
+  position: relative;
+}
+
+.msg-item .item-img-wrap {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.msg-item .item-img {
+  border-radius: 4px;
+}
+
+.msg-item .icon-tips {
+  background: red;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 18px;
+  transform: scaleX(0.9);
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
+.msg-item .tips--one-num {
+  width: 18px;
+}
+
+.tips--more-num {
+  padding: 0 5px;
+}
+
+.tips--only {
+  width: 10px;
+  height: 10px;
+  /* right: -4px; */
+  /* top: -4px; */
+}
+
+.item-text {
+  height: 50px;
+}
+
+.item-text .item-title {
+  color: #0d0d0d;
+  line-height: 1.5;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 90px;
+}
+
+.item-text .item-desc {
+  font-size: 14px;
+  color: #bbb;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item-time {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ddd;
+  font-size: 12px;
+  line-height: 24px;
+}

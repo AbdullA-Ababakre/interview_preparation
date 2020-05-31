@@ -1,0 +1,41 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 400;
+}
+
+.dialog {
+  width: 280px;
+  background-color: #fff;
+  text-align: center;
+  z-index: 401;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.dialog-bd {
+  padding: 15px 10px;
+}
+
+.dialog-ft {
+  display: flex;
+  border-top: 1px solid #dbdbdb;
+  line-height: 44px;
+}
+
+.dialog-ft .ft-btn {
+  flex: 1;
+  text-align: center;
+  border-left: 1px solid #dbdbdb;
+}
+
+.dialog-ft .ft-btn:first-child {
+  border-left: 0;
+}

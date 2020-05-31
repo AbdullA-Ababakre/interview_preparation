@@ -1,0 +1,319 @@
+/*
+* 题目要求：
+* 1、设置 CD 其循环旋转动画效果，其相应的动画名称为 circleRotate，动画完成一个周期所花费的时间为 5s, 且动画无限循环播放，动画执行曲线为 linear
+* 2、已知 CD 封面元素为绝对定位元素，现需设置 CD 封面的高度和宽度相等，都为容器的 67%
+* 3、已知播放器功能按钮栏为 flexbox 布局，需设置其均匀排列其子元素，使相邻子元素间距离相同，首个元素放置于起点，末尾元素放置于终点（justify-content）
+* 4、已知播放器播放控制栏为 flexbox 布局，需设置其均匀排列其子元素，使相邻子元素间距离相同，每个元素周围分配相同的空间 （space-around）
+* 5、设置当屏幕最大高度小于 540px 时，CD元素的宽度为 190px
+*/
+
+html body {
+  background: rgba(0, 0, 0, 0.7);
+}
+.page-music-play {
+  padding-top: 44px;
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  z-index: 99;
+  color: #fff;
+}
+.header-left {
+  float: left;
+}
+.header-right {
+  float: right;
+}
+.icon-back,
+.icon-share {
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.icon-back::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-width: 1px 0 0 1px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.icon-share {
+  background: url(http://coding.imweb.io/img/p3/music/action-share.png)
+    no-repeat center;
+  background-size: 24px 24px;
+}
+.header .header-bd {
+  flex: 1;
+  text-align: center;
+}
+.header .page-tt {
+  line-height: 1.5;
+  font-size: 16px;
+  padding-top: 3px;
+}
+.header .singer {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.play-needle {
+  width: 100px;
+  height: 131px;
+  background: url(http://coding.imweb.io/img/p3/music/play-needle.png) no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  margin-left: -19px;
+  z-index: 9;
+}
+
+@keyframes circleRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.play-disc {
+  width: 76%;
+  max-width: 400px;
+  margin: 68px auto 0;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  /* TODO: 设置 CD 其循环旋转动画效果，动画名称为 circleRotate，动效为 linear，动画完成一个周期所花费的时间为5s, 且动画无限循环播放， */
+  animation-name: circleRotate;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.play-disc .disc-bg {
+  padding-top: 100%;
+  background: url(http://coding.imweb.io/img/p3/music/play-disc.png) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.play-disc .disc-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(http://coding.imweb.io/img/p3/music/cover.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  /* TODO: 设置宽高都为容器的宽度的67% */
+  padding-top: 67%;
+  width: 67%;
+}
+.section-control {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* action 功能按钮栏*/
+.control-action {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  /* TODO: 设置均匀排列其子元素，使相邻子元素间距离相同，首个元素放置于起点，末尾元素放置于终点（justify-content） */
+  justify-content: space-between;
+}
+.control-action::before,
+.control-action::after {
+  content: "";
+  width: 1px;
+  height: 1px;
+}
+.control-action .action-btn {
+  width: 44px;
+  padding: 10px 0;
+  text-align: center;
+}
+.icon-love,
+.icon-download,
+.icon-comment,
+.icon-more {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon-love {
+  background: url(http://coding.imweb.io/img/p3/music/action-loved.png)
+    no-repeat;
+  background-size: cover;
+}
+.icon-download {
+  background: url(http://coding.imweb.io/img/p3/music/action-downloaded.png)
+    no-repeat;
+  background-size: cover;
+}
+.icon-comment {
+  background: url(http://coding.imweb.io/img/p3/music/action-comment.png)
+    no-repeat;
+  background-size: cover;
+}
+.icon-more {
+  background: url(http://coding.imweb.io/img/p3/music/action-more.png) no-repeat;
+  background-size: cover;
+}
+/* progress */
+.control-progress {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 15px;
+  color: #ccc;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.control-progress .progress-line {
+  flex: 1;
+  position: relative;
+  margin: 0 15px;
+  height: 40px;
+}
+.control-progress .progress-line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+}
+.control-progress .line-pointer {
+  width: 50%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.control-progress .line-pointer::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: red;
+  border-radius: 2px;
+}
+.control-progress .line-pointer::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: red;
+  border: 5px solid #fff;
+  top: 50%;
+  right: -7px;
+  margin-top: -7px;
+}
+
+/* control-play 播放控制栏*/
+
+.control-play {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  margin-bottom: 20px;
+  /* TODO: 设置均匀排列其子元素，使相邻子元素间距离相同，每个元素周围分配相同的空间 （justify-content）*/
+  justify-content: space-around;
+}
+
+.control-play .play-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.control-play .btn--play {
+  width: 48px;
+  height: 48px;
+}
+.icon-order,
+.icon-prev,
+.icon-next,
+.icon-list {
+  width: 24px;
+  height: 24px;
+}
+.icon-play {
+  width: 48px;
+  height: 48px;
+}
+.icon-order {
+  background: url(http://coding.imweb.io/img/p3/music/play-btn-order.png)
+    no-repeat;
+  background-size: cover;
+}
+.icon-prev {
+  background: url(http://coding.imweb.io/img/p3/music/play-btn-prev.png)
+    no-repeat;
+  background-size: cover;
+}
+.icon-next {
+  background: url(http://coding.imweb.io/img/p3/music/play-btn-next.png)
+    no-repeat;
+  background-size: cover;
+}
+.icon-list {
+  background: url(http://coding.imweb.io/img/p3/music/play-btn-list.png)
+    no-repeat;
+  background-size: cover;
+}
+.icon-play {
+  background: url(http://coding.imweb.io/img/p3/music/play-btn-play.png)
+    no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 320px) {
+  .play-needle {
+    margin-left: -18px;
+  }
+}
+
+@media (max-height: 540px) {
+  .play-disc {
+    /* TODO: 设置当屏幕最大高度小于540px时, CD 元素宽度为190px */
+    margin-top: 58px;
+    width: 190px;
+  }
+  .play-needle {
+    width: 87px;
+    height: 114px;
+  }
+  .control-play {
+    margin-bottom: 10px;
+  }
+  .control-action,
+  .control-progress {
+    margin-bottom: 5px;
+  }
+}

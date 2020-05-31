@@ -1,0 +1,22 @@
+1.做4道题目
+2.你还在那边实习吗？
+2月29号时间道了........
+3.router的原理 具体是怎么实现的吗？
+本质是监听了URL的变化，实现的模式有2钟方法
+4.分别监听那些事件呢？ 
+hash模式会监听hashChange
+History会监听...(没有说出来），然后再触发相应的事件
+5.vue的响应式是怎么实现的吗？
+6.跨域 
+完美的回答了这个问题
+处于安全的考虑，浏览器有通源策略限制
+7.对象的深拷贝怎么实现
+我先说了javascript有基础类型，复杂类型，。。然后我说第一种方法是用loadsh等，然后我说用
+JSON.parse()有什么问题
+8.前端安全
+9.webpack了解过构建流程吗？
+10.什么是loader,plugin吗？
+loader是一个转换器，
+plugin是一个工具，htmlwebpackplugin,webpack-dev-server
+11.为什么会分为loader和plugin
+12.HTTP协议的状态码
