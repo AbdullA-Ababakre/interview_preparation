@@ -10,6 +10,7 @@ body {
   background: rgba(0, 0, 0, 0.7);
 }
 
+
 @keyframes rotateLoading {
   from {
     transform: rotate(0deg);
@@ -18,6 +19,9 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
+
 @keyframes pillarLoading {
   0%,
   100% {
@@ -28,6 +32,7 @@ body {
     background: lightblue;
   }
 }
+
 @keyframes pointLoading {
   0% {
     transform: scale(1);

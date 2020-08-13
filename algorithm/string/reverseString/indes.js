@@ -7,6 +7,7 @@ function reverseWord(str) {
     arr[i] = arr[i].split("").reverse().join("");
   }
   return arr.join(" ");
+
 }
 
 let res = reverseWord(str);

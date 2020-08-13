@@ -3,7 +3,7 @@ var a = 3;
 var total = 0;
 
 function foo(a) {
-  let i = 0; //3 6 9
+  let i = 0;     //3 6 9
   //   var i = 0;     //3 6 9
   for (; i < 3; i++) {
     result[i] = function () {

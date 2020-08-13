@@ -28,7 +28,7 @@ function Observer(){
 	}
 }
 
-let littleXin=new Observer('小新');
+let  littleXin=new Observer('小新');
 let  bigXin=new Observer('大新');
 
 let ladyD=new Subject('主播D');

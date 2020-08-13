@@ -2,6 +2,7 @@ const sym=Symbol();
 let obj={
 	[sym]:'Abdulla'
 };
+
 Object.defineProperty(obj, 'noIteration', {
   value: 4,
   enumerable: false

@@ -18,6 +18,7 @@ const p1 = new Promise((resolve, reject) => {
       .then(() => {
         console.log("then23");
       });
+
   })
 
   .then(() => {
@@ -25,7 +26,7 @@ const p1 = new Promise((resolve, reject) => {
   });
 
 const p2 = new Promise((resolve, reject) => {
-  console.log("promise3");
+console.log("promise3");
 
   resolve();
 }).then(() => {

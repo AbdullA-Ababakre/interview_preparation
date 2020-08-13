@@ -1,5 +1,3 @@
-
-
 function getBiggerNum(arr){
 	arr.sort((a,b)=>{
 		return a-b

@@ -29,6 +29,7 @@ function Jsonp(url) {
     console.log("callback", window.callback);
   });
 }
+
 //后台返回数据示例：callback({'name':'liuhao'})
 let url = "https://itunes.apple.com/search?term=jack+johnson&limit=5";
 Jsonp(url).then(function(res) {

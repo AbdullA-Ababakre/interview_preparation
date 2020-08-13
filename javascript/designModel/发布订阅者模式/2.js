@@ -18,11 +18,12 @@ class Event{
 			})
 		}
 	}
+
 }
 
 let event=new Event();
 event.on('click',()=>{
 	console.log("clicked");
-})
+});
 
 event.trigger('click');

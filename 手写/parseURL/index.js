@@ -1,5 +1,5 @@
 let url =
-  "http://www.domain.com/?user=anonymous&id=123&id=456&city=%E5%8C%97%E4%BA%AC&enabled";
+  "http://www.domain.com/? user=anonymous&id=123&id=456&city=%E5%8C%97%E4%BA%AC&enabled";
 
 function parseURL(url) {
   let index = url.indexOf("?");
